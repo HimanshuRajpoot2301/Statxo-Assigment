@@ -8,15 +8,7 @@ const cors = require('cors');
 const app = express();
 
 const PORT = process.env.PORT || 9000;
-// app.use(cors());
-const corsOptions = {
-    origin: 'http://localhost:3002', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors());
 
 app.use(bodyParser.json());
 
